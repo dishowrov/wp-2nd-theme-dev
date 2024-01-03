@@ -33,6 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h2 class="post-title">
+                                <!-- set post title/heading -->
                                 <?php the_title(); ?>
                             </h2>
                         </div>
@@ -42,21 +43,21 @@
                         <div class="col-md-4">
                             <p>
                                 <strong>
+                                    <!-- set post author -->
                                     <?php the_author(); ?>
                                 </strong>
                                 <br />
+                                <!-- set post date -->
                                 <?php the_date(); ?>
                             </p>
 
-                            <?php echo get_the_tag_list(); ?>
-
-                            <ul class="list-unstyled">
-                                <li>dhaka</li>
-                            </ul>
+                            <!-- set post tag(s) -->
+                            <?php echo get_the_tag_list('<ul class="list-unstyled"><li>', '</li><li>', '</li></ul>'); ?>
                         </div>
 
                         <div class="col-md-8">
                             <p>
+                                <!-- set post featured image -->
                                 <?php
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('large', array("class"=>"img-fluid"));
@@ -64,6 +65,7 @@
                                 ?>
                             </p>
 
+                            <!-- set post content/paragraph -->
                             <?php the_content(); ?>
                         </div>
                     </div>
