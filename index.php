@@ -47,6 +47,9 @@
                                 <br />
                                 <?php the_date(); ?>
                             </p>
+
+                            <?php echo get_the_tag_list(); ?>
+
                             <ul class="list-unstyled">
                                 <li>dhaka</li>
                             </ul>
@@ -56,10 +59,12 @@
                             <p>
                                 <?php
                                 if (has_post_thumbnail()) {
-                                    the_post_thumbnail();
+                                    the_post_thumbnail('large', array("class"=>"img-fluid"));
                                 }
                                 ?>
                             </p>
+
+                            <?php the_content(); ?>
                         </div>
                     </div>
 
