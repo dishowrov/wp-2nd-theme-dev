@@ -21,20 +21,21 @@
             </div>
         </div>
     </div>
- 
+
     <div class="posts">
         <?php
         while (have_posts()) {
             the_post();
         ?>
-
-            <div class="post" <?php post_class(); ?>>
+            <div class="post" <?php post_class(); ?>> 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <h2 class="post-title">
                                 <!-- set post title/heading -->
-                                <?php the_title(); ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
                             </h2>
                         </div>
                     </div>
@@ -48,7 +49,7 @@
                                 </strong>
                                 <br />
                                 <!-- set post date -->
-                                <?php the_date(); ?>
+                                <?php echo get_the_date(); ?>
                             </p>
 
                             <!-- set post tag(s) -->
@@ -60,22 +61,36 @@
                                 <!-- set post featured image -->
                                 <?php
                                 if (has_post_thumbnail()) {
-                                    the_post_thumbnail('large', array("class"=>"img-fluid"));
+                                    the_post_thumbnail('large', array("class" => "img-fluid"));
                                 }
                                 ?>
                             </p>
 
                             <!-- set post content/paragraph -->
-                            <?php the_content(); ?>
+                            <?php
+                                the_excerpt();
+                            ?>
+
                         </div>
                     </div>
-
                 </div>
             </div>
-
         <?php
         }
         ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-5">
+                    <?php
+                    the_posts_navigation(array(
+                        "prev_text" => "New Posts",
+                        "next_text" => "Old Posts"
+                    ));
+                    ?>
+                </div>
+            </div>
+        </div>
 
     </div>
 
