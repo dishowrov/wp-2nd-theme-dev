@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-
+ 
     <div class="posts">
         <?php
         while (have_posts()) {
