@@ -47,6 +47,12 @@
 
                         <!-- set post content/paragraph -->
                         <?php
+                        // if (!post_password_required()) {
+                        //     the_excerpt();
+                        // } else {
+                        //     echo get_the_password_form();
+                        // }
+
                         the_excerpt();
                         ?>
 
@@ -58,6 +64,8 @@
     }
     ?>
 
+
+    <!-- post navigation -->
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-5">

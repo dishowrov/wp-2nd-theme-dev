@@ -67,3 +67,20 @@ function webly_sidebar()
     );
 }
 add_action('widgets_init', 'webly_sidebar');
+
+
+function webly_the_excerpt($excerpt)
+{
+    if (!post_password_required()) {
+        return $excerpt;
+    } else {
+        echo get_the_password_form();
+    }
+}
+add_filter('the_excerpt', 'webly_the_excerpt');
+
+
+function webly_protected_title_change() {
+    return "%s";
+}
+add_action('protected_title_format', "webly_protected_title_change");
