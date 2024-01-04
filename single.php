@@ -54,10 +54,13 @@
                     if (comments_open()) :
                         comments_template();
                     endif;
+
+                    next_post_link();
+                    "<br/>";
+                    previous_post_link();
                     ?>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
