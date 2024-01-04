@@ -10,9 +10,10 @@
                 <div class="posts">
                     <div class="post" <?php post_class(); ?>>
                         <div class="container">
+
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h2 class="post-title text-center">
+                                    <h2 class="post-title">
                                         <!-- set post title/heading -->
                                         <?php the_title(); ?>
                                     </h2>
@@ -20,7 +21,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9 text-center">
+                                <div class="col-md-9 text-right">
                                     <p>
                                         <strong>
                                             <!-- set post author -->
@@ -54,7 +55,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-5 offset-md-3">
+                                <div class="col-md-9">
                                     <!-- if comments open show the sec otherwise ignore it -->
                                     <?php
                                     if (comments_open()) :
@@ -67,11 +68,12 @@
                                     ?>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <!-- sidebar part -->
             <div class="col-md-4">
                 <?php

@@ -29,5 +29,41 @@ function webly_sidebar()
             'after_title' => '</h2>'
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => __('Footer Left', 'webly'),
+            'id' => 'footer-left',
+            'description' => __('It is a dummy, fake, faul, ajaira as well as vondo footer left part.', 'webly'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '',
+            'after_title' => ''
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('Footer Middle', 'webly'),
+            'id' => 'footer-middle',
+            'description' => __('It is a dummy, fake, faul, ajaira as well as vondo footer Middle part.', 'webly'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => __('Footer Right', 'webly'),
+            'id' => 'footer-right',
+            'description' => __('It is a dummy, fake, faul, ajaira as well as vondo footer right  part.', 'webly'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+        )
+    );
 }
 add_action('widgets_init', 'webly_sidebar');
