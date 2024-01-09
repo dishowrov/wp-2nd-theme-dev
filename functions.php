@@ -15,7 +15,6 @@ function webly_assets()
 }
 add_action("wp_enqueue_scripts", "webly_assets");
 
-
 function webly_sidebar()
 {
     register_sidebar(
@@ -68,7 +67,6 @@ function webly_sidebar()
 }
 add_action('widgets_init', 'webly_sidebar');
 
-
 function webly_the_excerpt($excerpt)
 {
     if (!post_password_required()) {
@@ -79,8 +77,8 @@ function webly_the_excerpt($excerpt)
 }
 add_filter('the_excerpt', 'webly_the_excerpt');
 
-
-function webly_protected_title_change() {
+function webly_protected_title_change()
+{
     return "%s";
 }
 add_action('protected_title_format', "webly_protected_title_change");
