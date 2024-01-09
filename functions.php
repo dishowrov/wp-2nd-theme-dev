@@ -5,6 +5,9 @@ function webly_bootstrapping()
     load_theme_textdomain("webly");
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
+    register_nav_menu("top-menu", __("Top Menu", "webly"));
+    register_nav_menu("bottom-menu", __("Bottom Menu", "webly"));
+    register_nav_menu("hero-menu", __("Hero Menu", "webly"));
 }
 add_action("after_setup_theme", "webly_bootstrapping");
 
