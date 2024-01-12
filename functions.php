@@ -8,7 +8,7 @@ function webly_bootstrapping()
     register_nav_menu("top-menu", __("Top Menu", "webly"));
     register_nav_menu("bottom-menu", __("Bottom Menu", "webly"));
     register_nav_menu("hero-menu", __("Hero Menu", "webly"));
-} 
+}
 add_action("after_setup_theme", "webly_bootstrapping");
 
 function webly_assets()
@@ -85,3 +85,10 @@ function webly_protected_title_change()
     return "%s";
 }
 add_action('protected_title_format', "webly_protected_title_change");
+
+function webly_menu_item_class($classes, $item)
+{
+    $classes[] = "list-inline-item";
+    return $classes;
+}
+add_filter("nav_menu_css_class", "webly_menu_item_class", 10, 2);

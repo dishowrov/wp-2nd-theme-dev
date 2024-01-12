@@ -11,8 +11,18 @@
             </div>
 
             <!-- Hero Menu -->
-            <div class="col-md-5 offset-lg-4">
-                
+            <div class="col-md-12">
+                <div class="navigation">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location'=> 'top-menu',
+                            'menu_id' => 'top-menu-container' ,
+                            'menu_class' => 'list-inline text-center',
+                        )
+                    );
+                    ?>
+                </div>
             </div>
         </div>
     </div>
