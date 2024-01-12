@@ -8,7 +8,7 @@ function webly_bootstrapping()
     register_nav_menu("top-menu", __("Top Menu", "webly"));
     register_nav_menu("bottom-menu", __("Bottom Menu", "webly"));
     register_nav_menu("hero-menu", __("Hero Menu", "webly"));
-}
+} 
 add_action("after_setup_theme", "webly_bootstrapping");
 
 function webly_assets()
