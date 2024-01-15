@@ -76,7 +76,7 @@ function webly_the_excerpt($excerpt)
         return $excerpt;
     } else {
         echo get_the_password_form();
-    }
+    } 
 }
 add_filter('the_excerpt', 'webly_the_excerpt');
 
