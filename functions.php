@@ -15,9 +15,12 @@ function webly_assets()
 {
     wp_enqueue_style("mainss", get_stylesheet_uri());
     wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+    wp_enqueue_style("featherlight-css", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css");
+    
+    wp_enqueue_scripts("featherlight-js", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js", array("jquery"), "0.1", "true");
 }
 add_action("wp_enqueue_scripts", "webly_assets");
- 
+
 function webly_sidebar()
 {
     register_sidebar(
@@ -76,7 +79,7 @@ function webly_the_excerpt($excerpt)
         return $excerpt;
     } else {
         echo get_the_password_form();
-    } 
+    }
 }
 add_filter('the_excerpt', 'webly_the_excerpt');
 
