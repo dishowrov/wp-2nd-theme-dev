@@ -14,7 +14,13 @@
             <div class="col-md-12">
                 <div class="navigation">
                     <?php
-                    
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'middle-menu',
+                            'menu_id' => 'middle-menu-container',
+                            'menu_class' => 'text-center',
+                        )
+                    )
                     ?>
                 </div>
             </div>
