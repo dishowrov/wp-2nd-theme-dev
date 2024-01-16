@@ -1,6 +1,10 @@
 <?php
 
-die(site_url());
+if(site_url()=="https://test-purpose.local"){
+    define("VERSION", time());
+}else{
+    define("VERSION", wp_get_theme()->get("Version"));
+}
 
 function webly_bootstrapping()
 {
