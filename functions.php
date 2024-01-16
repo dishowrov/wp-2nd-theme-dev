@@ -17,7 +17,7 @@ function webly_assets()
     wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 }
 add_action("wp_enqueue_scripts", "webly_assets");
-
+ 
 function webly_sidebar()
 {
     register_sidebar(
