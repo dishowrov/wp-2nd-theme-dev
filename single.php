@@ -43,8 +43,8 @@
                                         if (has_post_thumbnail()) {
                                             $thumbnail_url = get_the_post_thumbnail_url(null, "large");
                                             
-                                            echo '<a href="'.$thumbnail_url.'" data-featherlight="image"> class="popup-img"';
-
+                                            echo '<a href="'.$thumbnail_url.'" data-featherlight="image" class="popup-img">';
+                                            
                                             the_post_thumbnail('large', array("class" => "img-fluid"));
 
                                             echo "</a>";
