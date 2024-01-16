@@ -18,6 +18,7 @@ function webly_assets()
     wp_enqueue_style("featherlight-css", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css");
     
     wp_enqueue_script("featherlight-js", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js", array("jquery"), "0.1", "true");
+    wp_enqueue_script("webly-custom", get_theme_file_uri("/assets/js/custom.js"), array("jquery", "featherlight-js") , "0", true);
 }
 add_action("wp_enqueue_scripts", "webly_assets");
 
