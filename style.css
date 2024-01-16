@@ -64,3 +64,8 @@ h2.post-title {
 .tags li {
     color: #3D9970;
 }
+
+.hero-banner {
+    background-position: center;
+    background-size: cover;
+}
