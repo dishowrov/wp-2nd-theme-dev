@@ -1,5 +1,7 @@
 <?php
 
+die(site_url());
+
 function webly_bootstrapping()
 {
     load_theme_textdomain("webly");
@@ -13,7 +15,7 @@ add_action("after_setup_theme", "webly_bootstrapping");
 
 function webly_assets()
 {
-    wp_enqueue_style("mainss", get_stylesheet_uri());
+    wp_enqueue_style("mainss", get_stylesheet_uri(), null, time());
     wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
     wp_enqueue_style("featherlight-css", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css");
     
