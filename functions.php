@@ -115,8 +115,20 @@ function webly_islamic_page_template_banner()
             }
         </style>
 
-<?
+        <?
+    }
 
+    if (is_front_page()) {
+        if (current_theme_supports("custom-header")) {
+        ?>
+            <style>
+                .header {
+                    background: url(<?php echo header_image(); ?>) no-repeat;
+                    background-size: cover;
+                }
+            </style>
+<?
+        }
     }
 }
 add_action("wp_head",      "webly_islamic_page_template_banner");
