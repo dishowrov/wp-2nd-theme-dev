@@ -1,8 +1,8 @@
 <?php
 
-if(site_url()=="https://test-purpose.local"){
+if (site_url() == "https://test-purpose.local") {
     define("VERSION", time());
-}else{
+} else {
     define("VERSION", wp_get_theme()->get("Version"));
 }
 
@@ -22,9 +22,9 @@ function webly_assets()
     wp_enqueue_style("mainss", get_stylesheet_uri(), null, time());
     wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
     wp_enqueue_style("featherlight-css", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css");
-    
+
     wp_enqueue_script("featherlight-js", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js", array("jquery"), "0.1", "true");
-    wp_enqueue_script("webly-custom", get_theme_file_uri("/assets/js/custom.js"), array("jquery", "featherlight-js") , "0", true);
+    wp_enqueue_script("webly-custom", get_theme_file_uri("/assets/js/custom.js"), array("jquery", "featherlight-js"), "0", true);
 }
 add_action("wp_enqueue_scripts", "webly_assets");
 
@@ -102,3 +102,21 @@ function webly_menu_item_class($classes, $item)
     return $classes;
 }
 add_filter("nav_menu_css_class", "webly_menu_item_class", 10, 2);
+
+function webly_islamic_page_template_banner()
+{
+    if (is_page()) {
+        $webly_feature_img = get_the_post_thumbnail_url(null, "large");
+?>
+        <style>
+            .hero-banner {
+                background: url(<?php echo $webly_feature_img; ?>);
+            }
+        </style>
+
+<?
+
+    }
+}
+
+add_action("wp_head",      "webly_islamic_page_template_banner");

@@ -5,7 +5,7 @@
 */
 
 get_header(); ?>
-<?php get_template_part("/template-parts/islamic-page/hero-page"); ?>
+<?php get_template_part("template-parts/islamic-page/hero-page"); ?>
 
 
 <div class="posts">
