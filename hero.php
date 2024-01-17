@@ -1,10 +1,4 @@
-<?php
-
-$webly_feature_img = get_the_post_thumbnail_url(null, "large");
-
-?>
-
-<div class="header hero-banner" style="background-image: url(<?php $webly_feature_img; ?>);">
+<div class="header">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

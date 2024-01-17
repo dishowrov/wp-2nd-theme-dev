@@ -68,4 +68,16 @@ h2.post-title {
 .hero-banner {
     background-position: center;
     background-size: cover;
+    background-color: tomato;
+    margin-bottom: 455px;
+}
+
+.hero-banner h1 {
+    color: #ffFFFF;
+}
+
+
+.hero-banner h3 {
+    color: cyan;
+    background-color: rgb(39, 33, 33);
 }
