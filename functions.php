@@ -11,6 +11,7 @@ function webly_bootstrapping()
     load_theme_textdomain("webly");
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
+    add_theme_support("custom-header");
     register_nav_menu("top-menu", __("Top Menu", "webly"));
     register_nav_menu("middle-menu", __("Middle Menu", "webly"));
     register_nav_menu("bottom-menu", __("Bottom Menu", "webly"));
@@ -118,5 +119,4 @@ function webly_islamic_page_template_banner()
 
     }
 }
-
 add_action("wp_head",      "webly_islamic_page_template_banner");
