@@ -18,11 +18,11 @@ function webly_bootstrapping()
     );
     add_theme_support("custom-header", $webly_custom_header_details);
 
-    $webly_custom_logo = array(
+    $webly_custom_logo_details = array(
         'height'    => '100',
         'width'     => '100'
     );
-    add_theme_support("custom-logo", $webly_custom_logo);
+    add_theme_support("custom-logo", $webly_custom_logo_details);
 
     register_nav_menu("top-menu", __("Top Menu", "webly"));
     register_nav_menu("middle-menu", __("Middle Menu", "webly"));
