@@ -2,6 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+
+                <!-- Custom Logo Setup -->
+                <?php
+                if (current_theme_supports("custom-logo")) :
+                ?>
+                    <div class="hero-logo">
+                        <?php the_custom_logo(); ?>
+                    </div>
+                <?php
+                endif;
+                ?>
+
                 <h3 class="tagline">
                     <?php bloginfo("description"); ?>
                 </h3>

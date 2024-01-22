@@ -81,3 +81,16 @@ h2.post-title {
     color: cyan;
     background-color: rgb(39, 33, 33);
 }
+
+.hero-logo {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.hero-logo img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

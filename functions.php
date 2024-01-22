@@ -19,8 +19,8 @@ function webly_bootstrapping()
     add_theme_support("custom-header", $webly_custom_header_details);
 
     $webly_custom_logo_details = array(
-        'height'    => '100',
-        'width'     => '100'
+        "height"    => '100',
+        "width"     => '100'
     );
     add_theme_support("custom-logo", $webly_custom_logo_details);
 
