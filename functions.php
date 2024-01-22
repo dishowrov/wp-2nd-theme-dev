@@ -11,9 +11,9 @@ function webly_bootstrapping()
     load_theme_textdomain("webly");
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
-    $webly_custom_header_details = array (
+    $webly_custom_header_details = array(
         'header-text'               => true,
-        'default-text-color'        => '#81d742' 
+        'default-text-color'        => '#81d742'
     );
     add_theme_support("custom-header", $webly_custom_header_details);
     register_nav_menu("top-menu", __("Top Menu", "webly"));
@@ -131,14 +131,15 @@ function webly_islamic_page_template_banner()
                     background-size: cover;
                 }
 
-                .header h1.heading, h3.tagline {
+                .header h1.heading,
+                h3.tagline {
                     color: #<?php echo get_header_textcolor(); ?>;
-                    
+
 
                     <?php
-                        if(!display_header_text()) {
-                            echo "display: none;";
-                        }
+                    if (!display_header_text()) {
+                        echo "display: none;";
+                    }
                     ?>
                 }
             </style>
