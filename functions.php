@@ -14,7 +14,10 @@ function webly_bootstrapping()
 
     $webly_custom_header_details = array(
         'header-text'               => true,
-        'default-text-color'        => '#81d742'
+        'default-text-color'        => '#81d742',
+        'height' => 700,
+        'width' => 500,
+        'flex-width' => true,
     );
     add_theme_support("custom-header", $webly_custom_header_details);
 
