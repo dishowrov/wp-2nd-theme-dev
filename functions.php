@@ -27,6 +27,8 @@ function webly_bootstrapping()
     );
     add_theme_support("custom-logo", $webly_custom_logo_details);
 
+    add_theme_support("custom-background");
+
     register_nav_menu("top-menu", __("Top Menu", "webly"));
     register_nav_menu("middle-menu", __("Middle Menu", "webly"));
     register_nav_menu("bottom-menu", __("Bottom Menu", "webly"));
