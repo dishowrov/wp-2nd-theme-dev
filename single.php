@@ -55,6 +55,8 @@
                                     <!-- set post content/paragraph -->
                                     <?php
                                     the_content();
+
+                                    wp_link_pages();
                                     ?>
 
                                 </div>
@@ -67,8 +69,6 @@
                                     if (comments_open()) :
                                         comments_template();
                                     endif;
-
-                                    wp_link_pages();
 
                                     next_post_link();
                                     "<br/>";
