@@ -55,8 +55,6 @@
                                     <!-- set post content/paragraph -->
                                     <?php
                                     the_content();
-
-                                    wp_link_pages();
                                     ?>
 
                                 </div>
