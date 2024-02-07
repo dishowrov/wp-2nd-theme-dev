@@ -21,7 +21,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9 text-right">
+                                <div class="col-md-12 text-right">
                                     <p>
                                         <strong>
                                             <!-- set post author -->
@@ -36,7 +36,7 @@
                                     <?php echo get_the_tag_list('<ul class="list-unstyled"><li>', '</li><li>', '</li></ul>'); ?>
                                 </div>
 
-                                <div class="col-md-9 text-center">
+                                <div class="col-md-12 text-center">
                                     <p>
                                         <!-- set post featured image -->
                                         <?php
@@ -52,6 +52,9 @@
 
                                         // set post content/paragraph
                                         the_content();
+
+                                        // It is not working for page navigation
+                                        wp_link_pages()
                                         ?>
                                     </p>
 
