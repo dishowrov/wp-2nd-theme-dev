@@ -68,6 +68,8 @@
                                         comments_template();
                                     endif;
 
+                                    wp_link_pages();
+
                                     next_post_link();
                                     "<br/>";
                                     previous_post_link();
