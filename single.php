@@ -49,13 +49,11 @@
 
                                             echo "</a>";
                                         }
+
+                                        // set post content/paragraph
+                                        the_content();
                                         ?>
                                     </p>
-
-                                    <!-- set post content/paragraph -->
-                                    <?php
-                                    the_content();
-                                    ?>
 
                                 </div>
                             </div>
