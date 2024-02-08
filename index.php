@@ -7,7 +7,7 @@
         the_post();
 
         // to get post formats
-get_template_part("post-formats/content-normal", get_post_format());
+        get_template_part("post-formats/content-normal", get_post_format());
     }
     ?>
 
