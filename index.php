@@ -5,7 +5,7 @@
     <?php
     while (have_posts()) {
         the_post();
-    ?> 
+    ?>
         <div <?php post_class(); ?>>
             <div class="container">
                 <div class="row">
@@ -31,8 +31,21 @@
                             <?php echo get_the_date(); ?>
                         </p>
 
-                        <!-- set post tag(s) -->
-                        <?php echo get_the_tag_list('<ul class="list-unstyled"><li>', '</li><li>', '</li></ul>'); ?>
+                        <?php
+                        // set post tag(s) 
+                        echo get_the_tag_list('<ul class="list-unstyled"><li>', '</li><li>', '</li></ul>');
+
+                        // set post format
+                        $webly_formats = get_post_format();
+                        if ($webly_formats == 'quote') {
+                            echo '<span class="dashicons dashicons-editor-quote"></span>';
+                        } else if ($webly_formats == 'video') {
+                            echo '<span class="dashicons dashicons-playlist-video"></span>';
+                        } else if ($webly_formats == 'aside') {
+                            echo '<span class="dashicons dashicons-format-aside"></span>';
+                        }
+
+                        ?>
                     </div>
 
                     <div class="col-md-8">
@@ -42,7 +55,6 @@
                             if (has_post_thumbnail()) {
 
                                 the_post_thumbnail('large', array("class" => "img-fluid"));
-
                             }
                             ?>
                         </p>
