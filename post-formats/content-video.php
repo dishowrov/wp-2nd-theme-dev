@@ -21,6 +21,8 @@
                     <br />
                     <!-- set post date -->
                     <?php echo get_the_date(); ?>
+
+                    <span class="dashicons dashicons-playlist-video"></span>
                 </p>
 
                 <?php

@@ -7,7 +7,7 @@
         the_post();
 
         // to get post formats
-        get_template_part("post-formats/content-normal", get_post_format());
+        get_template_part("post-formats/content", get_post_format());
     }
     ?>
 
@@ -18,6 +18,7 @@
             <div class="col-md-4 offset-md-5">
                 <?php
                 the_posts_navigation(array(
+                    "screen_reader_text" => ' ',
                     "prev_text" => "New Posts",
                     "next_text" => "Old Posts"
                 ));
