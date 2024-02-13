@@ -1,3 +1,11 @@
+<?php
+$webly_layout_class = "col-md-8";
+if (!is_active_sidebar("webly-sidebar-1")) {
+    $webly_layout_class = "col-md-10 offset-md-1";
+}
+?>
+
+
 <?php get_header(); ?>
 <?php get_template_part("template-parts\common\hero"); ?>
 
@@ -6,12 +14,12 @@
         <div class="row">
 
             <!-- contents part -->
-            <div class="col-md-8">
+            <div class="<?php echo $webly_layout_class; ?>">
                 <div class="posts">
                     <div class="post" <?php post_class(); ?>>
-                        <div class="container">
+                        <div class="">
 
-                            <div class="row">
+                            <div class="">
                                 <div class="col-md-12">
                                     <h2 class="post-title">
                                         <!-- set post title/heading -->
@@ -20,7 +28,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="">
                                 <div class="col-md-12 text-right">
                                     <p>
                                         <strong>
@@ -42,9 +50,9 @@
                                         <?php
                                         if (has_post_thumbnail()) {
                                             $thumbnail_url = get_the_post_thumbnail_url(null, "large");
-                                            
-                                            echo '<a href="'.$thumbnail_url.'" data-featherlight="image" class="popup-img">';
-                                            
+
+                                            echo '<a href="' . $thumbnail_url . '" data-featherlight="image" class="popup-img">';
+
                                             the_post_thumbnail('large', array("class" => "img-fluid"));
 
                                             echo "</a>";
@@ -61,8 +69,8 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-9">
+                            <div class="">
+                                <div class="col-md-12 ">
                                     <!-- if comments open show the sec otherwise ignore it -->
                                     <?php
                                     if (comments_open()) :
@@ -80,15 +88,21 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- sidebar part -->
-            <div class="col-md-4">
-                <?php
-                if (is_active_sidebar('sidebar-1')) {
-                    dynamic_sidebar('sidebar-1');
-                }
-                ?>
-            </div>
+            <?php
+            if (is_active_sidebar("webly-sidebar-1")) :
+            ?>
+                <div class="col-md-4">
+                    <?php
+                    if (is_active_sidebar("webly-sidebar-1")) {
+                        dynamic_sidebar("webly-sidebar-1");
+                    }
+                    ?>
+                </div>
+            <?php
+            endif;
+            ?>
 
         </div>
     </div>

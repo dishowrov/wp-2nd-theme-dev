@@ -21,20 +21,15 @@
                     <br />
                     <!-- set post date -->
                     <?php echo get_the_date(); ?>
-
-                    <span class="dashicons dashicons-playlist-video"></span>
                 </p>
 
                 <?php
                 // set post tag(s) 
                 echo get_the_tag_list('<ul class="list-unstyled"><li>', '</li><li>', '</li></ul>');
 
-                // set post format
-                echo '<span class="dashicons dashicons-video-alt"></span>';
-                echo '<span class="dashicons dashicons-playlist-video"></span>';
-                echo '<span class="dashicons dashicons-video-alt3"></span>';
-
                 ?>
+                <!-- set post format -->
+                <span class="dashicons dashicons-video-alt3"></span>
             </div>
 
             <div class="col-md-8">

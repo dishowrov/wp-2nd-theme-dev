@@ -27,10 +27,9 @@
                 // set post tag(s) 
                 echo get_the_tag_list('<ul class="list-unstyled"><li>', '</li><li>', '</li></ul>');
 
-                // set post format
-                echo '<span class="dashicons dashicons-embed-audio"></span>';
-
                 ?>
+                <!-- set post format -->
+                <span class="dashicons dashicons-embed-audio"></span>
             </div>
 
             <div class="col-md-8">

@@ -52,8 +52,8 @@ function webly_sidebar()
 {
     register_sidebar(
         array(
-            'name' => __('Sigle Post Sidebar', 'webly'),
-            'id' => 'sidebar-1',
+            'name' => __('The Sigle Post Sidebar', 'webly'),
+            'id' => "webly-sidebar-1",
             'description' => __('It is a dummy, fake, faul, ajaira as well as vondo sidebar.', 'webly'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
